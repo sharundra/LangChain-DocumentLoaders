@@ -1,0 +1,10 @@
+1. "pip install -r requirements.txt"
+2. Create scrpits demonstrating usage of TextLoader, PyPDFLoader, DirectoryLoader.
+    # Because of loading a lot of PDFs, DirectoryLoader takes a lot of time to load. Also, we can't load a lot of PDFs in memory too. Hence concept of "lazy load'.
+3. Create script for WebBaseLoader and CSVLoader too.
+    # WebBaseLoader uses two libraries, "requests" and "BeautifulSoap4" to accomplish the task.
+	#	requests -- sends the message to the server hosting the URL and receives the raw HTML.
+	#	beautifulSoap4 -- It takes the raw html string and returns the clean, plain text that can be fed into LLM.
+# While for TextLoader and WebBaseLoader, Entire given input content is just one document but for PyPDFLoader every page is a document and for CSVLoader, every row is a document.
+# We can apply lazy_load for DirectoryLoader, PyPDFLoader and CSVLoader.
+
